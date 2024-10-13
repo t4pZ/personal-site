@@ -1,8 +1,8 @@
 {
-  auto_https off
+	auto_https off
 }
 
 :{$CADDY_LISTEN_PORT} {
-  encode gzip
-  file_server
+	encode gzip
+	file_server
 }
