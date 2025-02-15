@@ -2,11 +2,15 @@
 import Container from "./Container.astro";
 ---
 
-<Container>
-  <div class="border-b border-slate-900/10 px-4 py-4 dark:border-slate-300/10">
-    <div class="flex w-full justify-between">
-      <a class="inline-block" href="/">HOME</a>
-      <nav class="flex">MENU</nav>
+<header>
+  <Container>
+    <div
+      class="rounded-full border bg-white/75 px-4 py-4 shadow-sm dark:border-gray-900/75 dark:bg-gray-950/75"
+    >
+      <div class="flex w-full justify-between">
+        <a class="inline-block" href="/">HOME</a>
+        <nav class="flex">MENU</nav>
+      </div>
     </div>
-  </div>
-</Container>
+  </Container>
+</header>
