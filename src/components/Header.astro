@@ -1,15 +1,27 @@
 ---
 import Container from "./Container.astro";
+import Logo from "./Logo.astro";
+import Link from "./Link.astro";
 ---
 
-<header>
+<header
+  class="fixed top-0 right-0 left-0 z-50 bg-white/75 py-5 dark:bg-gray-950/75"
+>
   <Container>
-    <div
-      class="rounded-full border bg-white/75 px-4 py-4 shadow-sm dark:border-gray-900/75 dark:bg-gray-950/75"
-    >
+    <div class="">
       <div class="flex w-full justify-between">
-        <a class="inline-block" href="/">HOME</a>
-        <nav class="flex">MENU</nav>
+        <Logo />
+        <nav class="flex gap-1">
+          <Link href="/"> blog </Link>
+          <span>
+            {`/`}
+          </span>
+          <Link href="/"> work </Link>
+          <span>
+            {`/`}
+          </span>
+          <Link href="/"> projects </Link>
+        </nav>
       </div>
     </div>
   </Container>
