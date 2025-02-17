@@ -13,7 +13,7 @@ WORKDIR /app
 
 RUN npm run build
 
-FROM caddy:2.8.4-alpine
+FROM caddy:2.9.1-alpine
 
 COPY Caddyfile /etc/caddy/Caddyfile
 COPY --from=build /app/dist /srv
