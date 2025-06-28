@@ -1,2 +1,2 @@
 # personal-site
-Just my simple personal website
+Just my simple personal website.
