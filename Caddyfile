@@ -3,6 +3,16 @@
 }
 
 :{$CADDY_LISTEN_PORT} {
-	encode gzip
+  root * /srv
+	encode
+  try_files {path} {path}/ /index.html
 	file_server
+  header {
+		X-Frame-Options "SAMEORIGIN"
+		X-Content-Type-Options "nosniff"
+		X-XSS-Protection "1; mode=block"
+		Referrer-Policy "strict-origin-when-cross-origin"
+		# Optional: Cache static assets aggressively
+		# Cache-Control "public, max-age=31536000, immutable"
+	}
 }
